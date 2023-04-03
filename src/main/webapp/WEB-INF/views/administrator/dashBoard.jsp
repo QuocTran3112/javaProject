@@ -108,7 +108,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/userControl"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -121,7 +121,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -140,148 +140,7 @@
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
-						<li class="nav-item dropdown"><a
-							class="nav-icon dropdown-toggle" href="#" id="alertsDropdown"
-							data-bs-toggle="dropdown">
-								<div class="position-relative">
-									<i class="align-middle" data-feather="bell"></i> <span
-										class="indicator">4</span>
-								</div>
-						</a>
-							<div
-								class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
-								aria-labelledby="alertsDropdown">
-								<div class="dropdown-menu-header">4 New Notifications</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-danger" data-feather="alert-circle"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Update completed</div>
-												<div class="text-muted small mt-1">Restart server 12
-													to complete the update.</div>
-												<div class="text-muted small mt-1">30m ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-warning" data-feather="bell"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Lorem ipsum</div>
-												<div class="text-muted small mt-1">Aliquam ex eros,
-													imperdiet vulputate hendrerit et.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-primary" data-feather="home"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">Login from 192.186.1.8</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<i class="text-success" data-feather="user-plus"></i>
-											</div>
-											<div class="col-10">
-												<div class="text-dark">New connection</div>
-												<div class="text-muted small mt-1">Christina accepted
-													your request.</div>
-												<div class="text-muted small mt-1">14h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all notifications</a>
-								</div>
-							</div></li>
-						<li class="nav-item dropdown"><a
-							class="nav-icon dropdown-toggle" href="#" id="messagesDropdown"
-							data-bs-toggle="dropdown">
-								<div class="position-relative">
-									<i class="align-middle" data-feather="message-square"></i>
-								</div>
-						</a>
-							<div
-								class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
-								aria-labelledby="messagesDropdown">
-								<div class="dropdown-menu-header">
-									<div class="position-relative">4 New Messages</div>
-								</div>
-								<div class="list-group">
-									<a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="img/avatars/avatar-5.jpg"
-													class="avatar img-fluid rounded-circle"
-													alt="Vanessa Tucker">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="profile-header">&nbsp;</div>
-												<div class="text-dark">Vanessa Tucker</div>
-												<div class="text-muted small mt-1">Nam pretium turpis
-													et arcu. Duis arcu tortor.</div>
-												<div class="text-muted small mt-1">15m ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="${base}/img/adminIMG/avatars/avatar-2.jpg"
-													class="avatar img-fluid rounded-circle"
-													alt="William Harris">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">William Harris</div>
-												<div class="text-muted small mt-1">Curabitur ligula
-													sapien euismod vitae.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="${base}/img/adminIMG/avatars/avatar-4.jpg"
-													class="avatar img-fluid rounded-circle"
-													alt="Christina Mason">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Christina Mason</div>
-												<div class="text-muted small mt-1">Pellentesque auctor
-													neque nec urna.</div>
-												<div class="text-muted small mt-1">4h ago</div>
-											</div>
-										</div>
-									</a> <a href="#" class="list-group-item">
-										<div class="row g-0 align-items-center">
-											<div class="col-2">
-												<img src="${base}/img/adminIMG/avatars/avatar-3.jpg"
-													class="avatar img-fluid rounded-circle"
-													alt="Sharon Lessman">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Sharon Lessman</div>
-												<div class="text-muted small mt-1">Aenean tellus
-													metus, bibendum sed, posuere ac, mattis non.</div>
-												<div class="text-muted small mt-1">5h ago</div>
-											</div>
-										</div>
-									</a>
-								</div>
-								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Xem Tất Cả</a>
-								</div>
-							</div></li>
+
 						<li class="nav-item dropdown"><a
 							class="nav-icon dropdown-toggle d-inline-block d-sm-none"
 							href="#" data-bs-toggle="dropdown"> <i class="align-middle"
@@ -296,15 +155,15 @@
 								<a class="dropdown-item" href="pages-profile.html"><i
 									class="align-middle me-1" data-feather="user"></i> Profile</a> <a
 									class="dropdown-item" href="#"><i class="align-middle me-1"
-									data-feather="pie-chart"></i> Analytics</a>
+									data-feather="pie-chart"></i>${userLogined.email }</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="index.html"><i
-									class="align-middle me-1" data-feather="settings"></i> Settings
-									& Privacy</a> <a class="dropdown-item" href="#"><i
-									class="align-middle me-1" data-feather="help-circle"></i> Help
-									Center</a>
+									class="align-middle me-1" data-feather="settings"></i> Cài đặt
+								</a> <a class="dropdown-item" href="#"><i
+									class="align-middle me-1" data-feather="help-circle"></i> Trợ
+									giúp</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Log out</a>
+								<a class="dropdown-item" href="#">Đăng xuất</a>
 							</div></li>
 					</ul>
 				</div>
@@ -314,7 +173,7 @@
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3">
-						<strong>Analytics</strong> Dashboard
+						<strong>Bản thống kê</strong>
 					</h1>
 
 					<div class="row">
@@ -438,7 +297,7 @@
 							<div class="card flex-fill w-100">
 								<div class="card-header">
 
-									<h5 class="card-title mb-0">Browser Usage</h5>
+									<h5 class="card-title mb-0">Số lượng ghé thăm</h5>
 								</div>
 								<div class="card-body d-flex">
 									<div class="align-self-center w-100">
@@ -580,11 +439,11 @@
 								<!-- tìm kiếm theo danh mục sản phẩm -->
 								<select class="form-control" name="id" id="id"
 									style="margin-right: 5px;">
-									<option value="0">All</option>
+									<option value="0">Tất cả</option>
 								</select>
 
 								<button type="submit" id="btnSearch" name="btnSearch"
-									value="Search" class="btn btn-primary">Search</button>
+									value="Search" class="btn btn-primary">Tìm kiếm</button>
 							</div>
 						</div>
 						<div class="row">
@@ -664,13 +523,13 @@
 						<div class="col-6 text-end">
 							<ul class="list-inline">
 								<li class="list-inline-item"><a class="text-muted" href=""
-									target="_blank">Support</a></li>
+									target="_blank">Hỗ trợ</a></li>
 								<li class="list-inline-item"><a class="text-muted" href=""
-									target="_blank">Help Center</a></li>
+									target="_blank">Trung tâm trợ giúp</a></li>
 								<li class="list-inline-item"><a class="text-muted" href=""
-									target="_blank">Privacy</a></li>
+									target="_blank">Điều khoản</a></li>
 								<li class="list-inline-item"><a class="text-muted" href=""
-									target="_blank">Terms</a></li>
+									target="_blank">Dịch vụ</a></li>
 							</ul>
 						</div>
 					</div>
@@ -680,16 +539,6 @@
 	</div>
 
 	<script src="${base}/js/adminJS/app.js"></script>
-
-	<script type="text/javascript">	
-	function formatPrice(total){
-	    return total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-	};
-		var x = ${tolPrice};
-		
-		$('#idTolPrice').text(formatPrice(x)+'\nvnđ');
-		
-	</script>
 
 	<script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", function() {
@@ -933,6 +782,12 @@
 
 	<script type="text/javascript">	
 	$( document ).ready(function() {
+		function formatPrice(total){
+		    return total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+		};
+			var x = ${tolPrice};
+			
+		$('#idTolPrice').text(formatPrice(x)+'\nvnđ');
 		$("#paging").pagination({
 	        currentPage: ${saleOrderList.currentPage},
 	        items: ${saleOrderList.totalItems},

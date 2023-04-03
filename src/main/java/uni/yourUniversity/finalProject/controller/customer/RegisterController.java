@@ -22,53 +22,45 @@ import uni.yourUniversity.finalProject.services.UserService;
 import uni.yourUniversity.finalProject.services.UsersRolesService;
 
 @Controller
-public class RegisterController extends BaseController{
-	@RequestMapping(value = {"/register"}, method = RequestMethod.GET)
-	public String register(final Model model,
-							final HttpServletResponse response,
-							final HttpServletRequest request) 
-	throws IOException{
+public class RegisterController extends BaseController {
+	@RequestMapping(value = { "/register" }, method = RequestMethod.GET)
+	public String register(final Model model, final HttpServletResponse response, final HttpServletRequest request)
+			throws IOException {
 		Role role = roleService.getById(17);
 		model.addAttribute("guestRole", role);
-		
+
 		model.addAttribute("userModel", new Users());
-		
+
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
-		
+
 		return "customer/register";
 	}
-	
+
 	@Autowired
 	private RoleService roleService;
-	
-	@Autowired 
+
+	@Autowired
 	private UserService userService;
-	
+
 	@Autowired
 	private UsersRolesService urService;
-	
-	@RequestMapping(value = {"/register"}, method = RequestMethod.POST) 
-	public String contact2(final Model model,
-						  final HttpServletRequest request,
-						  final HttpServletResponse response,
-						  final @ModelAttribute("userModel") Users user)
-		throws IOException {
-		
+
+	@RequestMapping(value = { "/register" }, method = RequestMethod.POST)
+	public String contact2(final Model model, final HttpServletRequest request, final HttpServletResponse response,
+			final @ModelAttribute("userModel") Users user) throws IOException {
+
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("utf-8");
 
 		Integer defaultRole = 17;
-		
 		user.setPassword(new BCryptPasswordEncoder(4).encode(user.getPassword()));
 		userService.saveOrUpdate(user);
-		
-		//set users_roles
+		// set users_roles
 		UsersRoles ur = new UsersRoles();
 		ur.setRole_id(defaultRole);
 		ur.setUser_id(user.getId());
 		urService.saveOrUpdate(ur);
-		
 		return "redirect:/login";
 	}
 }

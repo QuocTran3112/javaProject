@@ -51,9 +51,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-<script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- include summernote css/js-->
 <link href="summernote-bs5.css" rel="stylesheet">
@@ -112,14 +115,17 @@
 		<div class="container px-4 px-lg-5 mt-5">
 
 			<div class="cartsuccesscard">
-				<div style="border-radius: 200px; height: 200px; width: 200px; background: #F8FAF5; margin: 0 auto;">
+				<div
+					style="border-radius: 200px; height: 200px; width: 200px; background: #F8FAF5; margin: 0 auto;">
 					<i class="checkmark">✓</i>
 				</div>
 				<h1>Success</h1>
 				<p>
-					We received your purchase request;<br /> we'll be in touch shortly!
+					Đơn hàng đặt thành công<br /> Chúng tôi sẽ sớm liên lạc với bạn
 				</p>
-				<a href="${base }/home" style="border: 1px solid black; background-color: blue; text-decoration: none;color: white; border-radius: 5px">Click here to head back to homepage</a>
+				<a href="${base }/home"
+					style="border: 1px solid black; background-color: blue; text-decoration: none; color: white; border-radius: 5px">Quay
+					về trang chủ</a>
 			</div>
 
 		</div>

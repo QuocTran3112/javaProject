@@ -90,7 +90,7 @@
 </head>
 <body>
 
-<div class="wrapper">
+	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.html"> <span
@@ -98,7 +98,7 @@
 				</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">Pages</li>
+					<li class="sidebar-header">Trang quản lý</li>
 
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/dashBoard"> <i
@@ -123,7 +123,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/userControl"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -136,7 +136,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -153,10 +153,10 @@
 				<div class="container">
 
 					<div class="d-flex p-8 justify-content-between">
-						<h3 class="text-primary mt-3 mr-4 float-left">Product
-							Management</h3>
-						<h4 class="text-danger mt-3 mr-4 float-right" name="useName">Hello,
-							Quoc Tran</h4>
+						<h3 class="text-primary mt-3 mr-4 float-left">Quản lý sản
+							phẩm</h3>
+						<h4 class="text-danger mt-3 mr-4 float-right" name="useName">Xin
+							chào, Quoc Tran</h4>
 					</div>
 
 					<div class="row">
@@ -165,14 +165,15 @@
 								class="form-horizontalw-100"
 								action="${base}/administrator/product/addProduct" method="POST"
 								id="form1" enctype="multipart/form-data">
-																
+
 								<div class="form-group">
 									<label class="control-label col-sm-8" for=title>Id:</label>
 									<sf:input path="id" type="text" class="form-control"
 										id="idTitle" placeholder="Nhập id sản phẩm" name="title"></sf:input>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-8" for=category>Category</label>
+									<label class="control-label col-sm-8" for=category>Danh
+										mục</label>
 									<sf:select path="category.id" id="category"
 										class="form-control">
 										<sf:options items="${categories }" itemValue="id"
@@ -233,14 +234,13 @@
 										id="idShortDes" placeholder="Mô tả ngắn" name="shortDes"></sf:input>
 								</div>
 								<div class="form-group">
-									<label class="control-label" for="detailDes">Mô
-										tả:</label>
+									<label class="control-label" for="detailDes">Mô tả:</label>
 									<div>
-									<!-- <div id="summernote"></div>
+										<!-- <div id="summernote"></div>
 									<div>
 										<input value="" style="display: none" id="summerNoteValue">
 									</div> -->
-								</div>
+									</div>
 									<sf:textarea path="detailDes" type="text" class="form-control"
 										id="idDetailDes" placeholder="Mô tả chi tiết" name="detailDes"
 										required="required"></sf:textarea>
@@ -253,23 +253,23 @@
 								<div class="form-group">
 									<button type="submit" form="form1" value="Submit"
 										style="border: 0; color: white; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: rgb(20, 208, 250); width: 370px; height: 30px; border-radius: 5px; margin-top: 20px;">
-										Add</button>
+										Thêm/Sửa</button>
 								</div>
-								
+
 							</sf:form>
 							<!-- <div class="form-group">
 									<button type="button" onclick=testBtn()>Add</button>
 								</div>
 							Spring-form
 						</div> -->
-						<!-- Col 1 -->
-					</div>
+							<!-- Col 1 -->
+						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 	</div>
-<!-- 	<script type="text/javascript">
+	<!-- 	<script type="text/javascript">
 	function testBtn() {
 		var html = $('#summernote').summernote('code');
 		alert(html);
@@ -278,7 +278,7 @@
 		  $('#summernote').summernote();
 		});
 	</script> -->
-	
+
 	<script src="${base}/js/adminJS/app.js"></script>
 </body>
 </html>

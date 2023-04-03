@@ -12,7 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 
+import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -29,9 +31,19 @@ public class Users extends BaseEntity implements UserDetails{
 	private String username;
 	
 	@Column(name = "password", length = 100, nullable = false)
+	@Length(min = 6, message = "Mật khẩu ít nhất 6 ký tự")
 	private String password;
-	
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	@Column(name = "email", length = 45, nullable = false)
+	@Email(message = "Email không hợp lệ")
 	private String email;
 	
 	@Column(name = "phone", length = 100, nullable = true)

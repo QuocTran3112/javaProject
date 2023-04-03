@@ -71,11 +71,13 @@
 	href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
 	rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-
 <body>
 	<div class="wrapper">
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle"> <i
+					class="hamburger align-self-center"></i>
+				</a>
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
@@ -90,7 +92,7 @@
 							<div
 								class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
 								aria-labelledby="alertsDropdown">
-								<div class="dropdown-menu-header">4 New Notifications</div>
+								<div class="dropdown-menu-header">4 Thông báo mới</div>
 								<div class="list-group">
 									<a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
@@ -98,9 +100,8 @@
 												<i class="text-danger" data-feather="alert-circle"></i>
 											</div>
 											<div class="col-10">
-												<div class="text-dark">Update completed</div>
-												<div class="text-muted small mt-1">Restart server 12
-													to complete the update.</div>
+												<div class="text-dark">Cập nhật</div>
+												<div class="text-muted small mt-1">Khởi động lại</div>
 												<div class="text-muted small mt-1">30m ago</div>
 											</div>
 										</div>
@@ -109,12 +110,7 @@
 											<div class="col-2">
 												<i class="text-warning" data-feather="bell"></i>
 											</div>
-											<div class="col-10">
-												<div class="text-dark">Lorem ipsum</div>
-												<div class="text-muted small mt-1">Aliquam ex eros,
-													imperdiet vulputate hendrerit et.</div>
-												<div class="text-muted small mt-1">2h ago</div>
-											</div>
+
 										</div>
 									</a> <a href="#" class="list-group-item">
 										<div class="row g-0 align-items-center">
@@ -122,8 +118,8 @@
 												<i class="text-primary" data-feather="home"></i>
 											</div>
 											<div class="col-10">
-												<div class="text-dark">Login from 192.186.1.8</div>
-												<div class="text-muted small mt-1">5h ago</div>
+												<div class="text-dark">Đăng nhập từ 192.186.1.8</div>
+												<div class="text-muted small mt-1">5h trước</div>
 											</div>
 										</div>
 									</a> <a href="#" class="list-group-item">
@@ -132,16 +128,15 @@
 												<i class="text-success" data-feather="user-plus"></i>
 											</div>
 											<div class="col-10">
-												<div class="text-dark">New connection</div>
-												<div class="text-muted small mt-1">Christina accepted
-													your request.</div>
-												<div class="text-muted small mt-1">14h ago</div>
+												<div class="text-dark">Kết nối mới</div>
+												<div class="text-muted small mt-1">Lan đã chấp nhận</div>
+												<div class="text-muted small mt-1">14h trước</div>
 											</div>
 										</div>
 									</a>
 								</div>
 								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all notifications</a>
+									<a href="#" class="text-muted">Tất cả thông báo</a>
 								</div>
 							</div></li>
 						<li class="nav-item dropdown"><a
@@ -155,7 +150,7 @@
 								class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
 								aria-labelledby="messagesDropdown">
 								<div class="dropdown-menu-header">
-									<div class="position-relative">4 New Messages</div>
+									<div class="position-relative">4 lời nhắn</div>
 								</div>
 								<div class="list-group">
 									<a href="#" class="list-group-item">
@@ -167,10 +162,9 @@
 											</div>
 											<div class="col-10 ps-2">
 												<div class="profile-header">&nbsp;</div>
-												<div class="text-dark">Vanessa Tucker</div>
-												<div class="text-muted small mt-1">Nam pretium turpis
-													et arcu. Duis arcu tortor.</div>
-												<div class="text-muted small mt-1">15m ago</div>
+												<div class="text-dark">Vân</div>
+												<div class="text-muted small mt-1">Đồng ý lời mời</div>
+												<div class="text-muted small mt-1">15p trước</div>
 											</div>
 										</div>
 									</a> <a href="#" class="list-group-item">
@@ -181,10 +175,10 @@
 													alt="William Harris">
 											</div>
 											<div class="col-10 ps-2">
-												<div class="text-dark">William Harris</div>
-												<div class="text-muted small mt-1">Curabitur ligula
-													sapien euismod vitae.</div>
-												<div class="text-muted small mt-1">2h ago</div>
+												<div class="text-dark">Hà</div>
+												<div class="text-muted small mt-1">Trả lười tin của
+													bạn</div>
+												<div class="text-muted small mt-1">2g ago</div>
 											</div>
 										</div>
 									</a> <a href="#" class="list-group-item">
@@ -193,12 +187,6 @@
 												<img src="${base}/img/adminIMG/avatars/avatar-4.jpg"
 													class="avatar img-fluid rounded-circle"
 													alt="Christina Mason">
-											</div>
-											<div class="col-10 ps-2">
-												<div class="text-dark">Christina Mason</div>
-												<div class="text-muted small mt-1">Pellentesque auctor
-													neque nec urna.</div>
-												<div class="text-muted small mt-1">4h ago</div>
 											</div>
 										</div>
 									</a> <a href="#" class="list-group-item">
@@ -209,10 +197,9 @@
 													alt="Sharon Lessman">
 											</div>
 											<div class="col-10 ps-2">
-												<div class="text-dark">Sharon Lessman</div>
-												<div class="text-muted small mt-1">Aenean tellus
-													metus, bibendum sed, posuere ac, mattis non.</div>
-												<div class="text-muted small mt-1">5h ago</div>
+												<div class="text-dark">Mận</div>
+												<div class="text-muted small mt-1">Mãi keo bạn nhé:)</div>
+												<div class="text-muted small mt-1">5g trước</div>
 											</div>
 										</div>
 									</a>
@@ -235,13 +222,13 @@
 								<a class="dropdown-item" href="pages-profile.html"><i
 									class="align-middle me-1" data-feather="user"></i> Profile</a> <a
 									class="dropdown-item" href="#"><i class="align-middle me-1"
-									data-feather="pie-chart"></i> Analytics</a>
+									data-feather="pie-chart"></i> Phân tích</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="index.html"><i
-									class="align-middle me-1" data-feather="settings"></i> Settings
+									class="align-middle me-1" data-feather="settings"></i> Cài đặt
 									& Privacy</a> <a class="dropdown-item" href="#"><i
-									class="align-middle me-1" data-feather="help-circle"></i> Help
-									Center</a>
+									class="align-middle me-1" data-feather="help-circle"></i> Trung
+									tâm hỗ trợ</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="${base }/logout">Log out</a>
 							</div></li>
@@ -253,15 +240,13 @@
 				<div class="container-fluid p-0">
 
 					<div class="mb-3">
-						<h1 class="h3 d-inline align-middle">Profile</h1>
-						<a class="badge bg-dark text-white ms-2"
-							href="upgrade-to-pro.html"> Get more page examples </a>
+						<h1 class="h3 d-inline align-middle">Trang cá nhân</h1>
 					</div>
 					<div class="row">
 						<div class="col-md-4 col-xl-3">
 							<div class="card mb-3">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Profile Details</h5>
+									<h5 class="card-title mb-0">Thông tin chi tiết</h5>
 								</div>
 								<div class="card-body text-center">
 									<img src="${base}/img/adminIMG/avatars/avatar-4.jpg"
@@ -271,9 +256,9 @@
 									<div class="text-muted mb-2">Lead Developer</div>
 
 									<div>
-										<a class="btn btn-primary btn-sm" href="#">Follow</a> <a
+										<a class="btn btn-primary btn-sm" href="#">Theo dõi</a> <a
 											class="btn btn-primary btn-sm" href="#"><span
-											data-feather="message-square"></span> Message</a>
+											data-feather="message-square"></span> Tin nhắn</a>
 									</div>
 								</div>
 								<hr class="my-0" />
@@ -291,11 +276,11 @@
 								</div>
 								<hr class="my-0" />
 								<div class="card-body">
-									<h5 class="h6 card-title">About</h5>
+									<h5 class="h6 card-title">Về tôi</h5>
 									<ul class="list-unstyled mb-0">
 										<li class="mb-1"><span data-feather="home"
-											class="feather-sm me-1"></span> Lives in <a href="#">San
-												Francisco, SA</a></li>
+											class="feather-sm me-1"></span> Sống ở <a href="#">Hà
+												Nội, VN</a></li>
 
 										<li class="mb-1"><span data-feather="briefcase"
 											class="feather-sm me-1"></span> Works at <a href="#">GitHub</a></li>
@@ -305,7 +290,7 @@
 								</div>
 								<hr class="my-0" />
 								<div class="card-body">
-									<h5 class="h6 card-title">Elsewhere</h5>
+									<h5 class="h6 card-title">Link MXH</h5>
 									<ul class="list-unstyled mb-0">
 										<li class="mb-1"><a href="#">staciehall.co</a></li>
 										<li class="mb-1"><a href="#">Twitter</a></li>
@@ -323,60 +308,55 @@
 
 									<h5 class="card-title mb-0">Activities</h5>
 								</div>
-								<div class="card-body h-100">	
+								<div class="card-body h-100">
 
-										<div class="col-md-12 mt-2" style="margin-left: 30px">
-											<table class="table table-hover mt-4">
-												<thead>
+									<div class="col-md-12 mt-2" style="margin-left: 30px">
+										<table class="table table-hover mt-4">
+											<thead>
+												<tr>
+													<th>ID</th>
+													<th>Mã đơn hàng</th>
+													<th>Khách hàng</th>
+													<th>Email</th>
+													<th>Địa chỉ</th>
+													<th>Tổng tiền</th>
+													<th>Trạng thái</th>
+												</tr>
+											</thead>
+											<tbody id="table-body">
+												<c:forEach items="${saleOrderList }" var="saleOrder"
+													varStatus="loop">
 													<tr>
-														<th>ID</th>
-														<th>Mã đơn hàng</th>
-														<th>Khách hàng</th>
-														<th>Email</th>
-														<th>Địa chỉ</th>
-														<th>Tổng tiền</th>
-														<th>Trạng thái</th>
+														<td>${saleOrder.id }</td>
+														<td>${saleOrder.code }</td>
+														<td>${saleOrder.customerName }</td>
+														<td>${saleOrder.customerEmail }</td>
+														<td>${saleOrder.customerAddress }</td>
+														<td>${saleOrder.total }</td>
+														<td><span id="_product_status_${saleOrder.id} }">
+																<c:choose>
+																	<c:when test="${saleOrder.status }">
+																		<input type="checkbox" checked="checked"
+																			readonly="readonly">
+																	</c:when>
+																	<c:otherwise>
+																		<input type="checkbox" readonly="readonly">
+																	</c:otherwise>
+																</c:choose>
+														</span></td>
 													</tr>
-												</thead>
-												<tbody id="table-body">
-													<c:forEach items="${saleOrderList }" var="saleOrder"
-														varStatus="loop">
-															<tr>
-															<td>${saleOrder.id }</td>
-															<td>${saleOrder.code }</td>
-															<td>${saleOrder.customerName }</td>
-															<td>${saleOrder.customerEmail }</td>
-															<td>${saleOrder.customerAddress }</td>
-															<td>${saleOrder.total }</td>
-															<td><span id="_product_status_${saleOrder.id} }">
-																	<c:choose>
-																		<c:when test="${saleOrder.status }">
-																			<input type="checkbox" checked="checked"
-																				readonly="readonly">
-																		</c:when>
-																		<c:otherwise>
-																			<input type="checkbox" readonly="readonly">
-																		</c:otherwise>
-																	</c:choose>
-															</span></td>
-														</tr>
-													</c:forEach>
-												</tbody>
-											</table>
+												</c:forEach>
+											</tbody>
+										</table>
 
-											<!-- phân trang -->
-<!-- 											<div class="row">
-												<div class="col-12 d-flex justify-content-center">
-													<div id="paging"></div>
-												</div>
-											</div> -->
-										</div>
+									</div>
 
-									
+
 								</div>
 							</div>
-
 						</div>
+					</div>
+				</div>
 			</main>
 
 			<jsp:include page="/WEB-INF/views/customer/layout/footer.jsp"></jsp:include>

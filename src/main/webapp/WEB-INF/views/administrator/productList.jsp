@@ -18,8 +18,7 @@
 	content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 <!-- Web Icon -->
-<link rel="shortcut icon"
-	href="${base}/img/WebIcon.png" />	
+<link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 
 <!-- adminKit core -->
 <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
@@ -71,9 +70,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-<script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- include summernote css/js-->
 <link href="summernote-bs5.css" rel="stylesheet">
@@ -135,7 +137,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/userControl"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -148,7 +150,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -219,34 +221,32 @@
 									</tr>
 								</thead>
 								<tbody id="table-body">
-									<c:forEach items="${prodList.data }" var="product" varStatus="loop">
+									<c:forEach items="${prodList.data }" var="product"
+										varStatus="loop">
 										<tr>
 											<td>${product.id }</td>
-											<td>
-											<img alt="" src="${base }/upload/${product.avatar }" style="max-width: 50px">
-											</td>
+											<td><img alt="" src="${base }/upload/${product.avatar }"
+												style="max-width: 50px"></td>
 											<td>${product.title }</td>
 											<td>${product.category.name }</td>
 											<td>${product.price }</td>
 											<td>${product.priceSale }</td>
 											<td style="height: 50px; flex-wrap: nowrap;">${product.shortDes }</td>
-											<td>
-											<span id="_product_status_${product.id} }">
-												<c:choose>
-													<c:when test="${product.status }">
-														<input type="checkbox" checked="checked" readonly="readonly">
-													</c:when>
-													<c:otherwise>
-														<input type="checkbox" readonly="readonly">
-													</c:otherwise>
-												</c:choose>
-											</span>
-											</td>
+											<td><span id="_product_status_${product.id} }"> <c:choose>
+														<c:when test="${product.status }">
+															<input type="checkbox" checked="checked"
+																readonly="readonly">
+														</c:when>
+														<c:otherwise>
+															<input type="checkbox" readonly="readonly">
+														</c:otherwise>
+													</c:choose>
+											</span></td>
 											<td><a class="btn btn-sm btn-primary"
 												href="${base }/administrator/product/${product.id }">Edit</a>
 												<a class="btn btn-sm btn-primary"
-												href="${base }/administrator/commentControl/${product.id}">View all comment</a>
-												<a class="btn btn-sm btn-danger"
+												href="${base }/administrator/commentControl/${product.id}">View
+													all comment</a> <a class="btn btn-sm btn-danger"
 												href="${base }/administrator/productList/deleteProduct/${product.id }">Delete</a>
 										</tr>
 									</c:forEach>
@@ -291,7 +291,7 @@
 		});
 
 	</script>
-	
+
 	<script src="${base}/js/adminJS/app.js"></script>
 
 	<script

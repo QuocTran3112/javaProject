@@ -83,7 +83,7 @@
 				</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">Pages</li>
+					<li class="sidebar-header">Trang quản lý</li>
 
 					<li class="sidebar-item active"><a class="sidebar-link"
 						href="${base }/administrator/dashBoard"> <i

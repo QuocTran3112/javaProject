@@ -18,8 +18,7 @@
 	content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 <!-- Web Icon -->
-<link rel="shortcut icon"
-	href="${base}/img/WebIcon.png" />	
+<link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 
 <!-- adminKit core -->
 <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
@@ -71,9 +70,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-<script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- include summernote css/js-->
 <link href="summernote-bs5.css" rel="stylesheet">
@@ -109,7 +111,7 @@
 				</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">Pages</li>
+					<li class="sidebar-header">Trang Quản Lý</li>
 
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/dashBoard"> <i
@@ -140,18 +142,20 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
-						href="${base }/administrator/userControl"> <i class="align-middle"
-							data-feather="user-plus"></i> <span class="align-middle">Quản lý người dùng</span>
+						href="${base }/administrator/userControl"> <i
+							class="align-middle" data-feather="user-plus"></i> <span
+							class="align-middle">Quản lý người dùng</span>
 					</a></li>
-					
-					
+
+
 					<li class="sidebar-item"><a class="sidebar-link"
-						href="${base }/administrator/userList"> <i class="align-middle"
-							data-feather="user-plus"></i> <span class="align-middle">Danh sách người dùng</span>
+						href="${base }/administrator/userList"> <i
+							class="align-middle" data-feather="user-plus"></i> <span
+							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item active"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -163,64 +167,70 @@
 
 		<main class="content" style="background-color: white;">
 			<section class="py-5">
-			<div class="container">
-			<form action="${base }/administrator/saleOrderControl/${saleOrder.id}" method="get">
-				<h2 style="text-align: center; margin-top: -40px">Thông tin đơn hàng</h2>
-				<p>ID: ${sOInDatabase.id }</p>
-				<p>Mã đơn hàng: ${sOInDatabase.code }</p>
-				<p>Khách hàng: ${sOInDatabase.customerName }</p>
-				<div class="row" style="display: flex;">
-					<c:forEach var="product" items="${productBySOP }">
-						<div class="col-4" style="margin-top: 40px;">
-							<div class="card h-100" style="display: flex; width: 300px;">
-								<!-- Sale badge-->
-								<div class="badge bg-dark text-white position-absolute"
-									style="top: 0.5rem; right: 0.5rem; margin-right: 20px">Sale</div>
-								<!-- Product image-->
-								<img class="card-img-top" id="proAvatar"
-									src="${pageContext.servletContext.contextPath}/upload/${product.avatar }"
-									alt="..." style="margin: auto; margin-top: 20px; width: 200px" />
-								<!-- Product details-->
-								<div class="card-body p-4">
-									<div class="text-center">
-										<!-- Product name-->
-										<h5 class="fw-bolder">${product.title }</h5>
-										<!-- Product reviews-->
-										<div
-											class="d-flex justify-content-center small text-warning mb-2">
-											<div class="bi-star-fill"></div>
-											<div class="bi-star-fill"></div>
-											<div class="bi-star-fill"></div>
-											<div class="bi-star-fill"></div>
-											<div class="bi-star-fill"></div>
+				<div class="container">
+					<form
+						action="${base }/administrator/saleOrderControl/${saleOrder.id}"
+						method="get">
+						<h2 style="text-align: center; margin-top: -40px">Thông tin
+							đơn hàng</h2>
+						<p>ID: ${sOInDatabase.id }</p>
+						<p>Mã đơn hàng: ${sOInDatabase.code }</p>
+						<p>Khách hàng: ${sOInDatabase.customerName }</p>
+						<div class="row" style="display: flex;">
+							<c:forEach var="product" items="${productBySOP }">
+								<div class="col-4" style="margin-top: 40px;">
+									<div class="card h-100" style="display: flex; width: 300px;">
+										<!-- Sale badge-->
+										<div class="badge bg-dark text-white position-absolute"
+											style="top: 0.5rem; right: 0.5rem; margin-right: 20px">Sale</div>
+										<!-- Product image-->
+										<img class="card-img-top" id="proAvatar"
+											src="${pageContext.servletContext.contextPath}/upload/${product.avatar }"
+											alt="..."
+											style="margin: auto; margin-top: 20px; width: 200px" />
+										<!-- Product details-->
+										<div class="card-body p-4">
+											<div class="text-center">
+												<!-- Product name-->
+												<h5 class="fw-bolder">${product.title }</h5>
+												<!-- Product reviews-->
+												<div
+													class="d-flex justify-content-center small text-warning mb-2">
+													<div class="bi-star-fill"></div>
+													<div class="bi-star-fill"></div>
+													<div class="bi-star-fill"></div>
+													<div class="bi-star-fill"></div>
+													<div class="bi-star-fill"></div>
+												</div>
+												<!-- Product price-->
+												<fmt:setLocale value="vi_VN" />
+												<span class="text-muted text-decoration-line-through">
+													<fmt:formatNumber value="${product.price}" type="currency" />
+												</span>
+												<fmt:formatNumber value="${product.priceSale}"
+													type="currency" />
+											</div>
 										</div>
-										<!-- Product price-->
-										<fmt:setLocale value="vi_VN" />
-										<span class="text-muted text-decoration-line-through">
-											<fmt:formatNumber value="${product.price}" type="currency" />
-										</span>
-										<fmt:formatNumber value="${product.priceSale}" type="currency" />
-									</div>
-								</div>
-								<!-- Product actions-->
-								<div
-									class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex"
-									style="justify-content: center;">
-									<div class="text-right">
-										<a class="btn btn-outline-dark mt-auto"
-											href="${base }/productDetail/${product.id }"> View detail
-										</a>
-									</div>
+										<!-- Product actions-->
+										<div
+											class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex"
+											style="justify-content: center;">
+											<div class="text-right">
+												<a class="btn btn-outline-dark mt-auto"
+													href="${base }/productDetail/${product.id }"> Chi tiết
+												</a>
+											</div>
 
+										</div>
+									</div>
 								</div>
-							</div>
+							</c:forEach>
 						</div>
-					</c:forEach>
+						<h3 style="float: right; margin-top: 50px">Tổng tiền:
+							${sOInDatabase.total }</h3>
+					</form>
 				</div>
-				<h3 style="float: right; margin-top: 50px">Tổng tiền: ${sOInDatabase.total }</h3>
-				</form>
-			</div>
-		</section>
+			</section>
 		</main>
 	</div>
 
@@ -246,7 +256,7 @@
 		});
 
 	</script>
-	
+
 	<script src="${base}/js/adminJS/app.js"></script>
 
 	<script

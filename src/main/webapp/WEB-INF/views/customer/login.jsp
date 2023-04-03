@@ -33,8 +33,8 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 	integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-	
-	<!-- Web Icon -->
+
+<!-- Web Icon -->
 <link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 </head>
 <body>
@@ -47,14 +47,14 @@
 		</div>
 	</header>
 	<main>
-		
+
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
 				<div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
 					<div class="d-table-cell align-start">
 
 						<div class="text-center mt-4">
-							<h1 class="h2">Log In</h1>
+							<h1 class="h2">Đăng nhập</h1>
 						</div>
 
 						<div class="card">
@@ -67,32 +67,33 @@
 
 										<!-- kiểm tra xem đã login thành công hay không, bằng cách kiểm tra request param login_error -->
 										<c:if test="${not empty param.login_error}">
-											<div class="alert alert-danger" role="alert">Login
-												attempt was not successful, try again!!!</div>
+											<div class="alert alert-danger" role="alert">Đăng nhập
+												không thành công, hãy thử lại!</div>
 										</c:if>
 
 										<div class="mb-3">
-											<label class="form-label">Username</label> <input
+											<label class="form-label">Tên người dùng</label> <input
 												class="form-control form-control-lg" type="text"
 												name="username" id="idUserName"
 												placeholder="Enter your name" />
 										</div>
 
 										<div class="mb-3">
-											<label class="form-label">Password</label> <input
+											<label class="form-label">Mật khẩu</label> <input
 												class="form-control form-control-lg" type="password"
 												name="password" id="idPassword" placeholder="Enter password" />
 										</div>
 
 										<div class="mb-3">
 											<div class="form-group">
-												<input type="checkbox" name="remember-me" /> Remember me
+												<input type="checkbox" name="remember-me" /> Ghi nhớ cho
+												lần đăng nhập sau
 											</div>
 										</div>
 
 										<div class="text-center mt-3">
 											<button class="btn btn-lg btn-primary btn-block"
-												type="submit">Log In</button>
+												type="submit">Đăng nhập</button>
 										</div>
 									</form>
 								</div>
@@ -107,7 +108,8 @@
 
 	<footer style="background-color: gray;">
 		<p>
-			Do not have an account? <a class="signIn" href="${base}/register">Create an account</a>
+			Chưa có tài khoản? <a class="signIn" href="${base}/register">Tạo
+				tài khoản ngay</a>
 		</p>
 	</footer>
 </body>

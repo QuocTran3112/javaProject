@@ -18,8 +18,7 @@
 	content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 <!-- Web Icon -->
-<link rel="shortcut icon"
-	href="${base}/img/WebIcon.png" />
+<link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 
 <!-- adminKit core -->
 <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
@@ -71,9 +70,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-<script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- include summernote css/js-->
 <link href="summernote-bs5.css" rel="stylesheet">
@@ -110,7 +112,7 @@
 				</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">Pages</li>
+					<li class="sidebar-header">Trang Quản Lý</li>
 
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/dashBoard"> <i
@@ -135,7 +137,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/userControl"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -148,7 +150,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -165,9 +167,9 @@
 				<div class="container">
 
 					<div class="d-flex p-8 justify-content-between">
-						<h3 class="text-primary mt-3 mr-4 float-left">User
-							Management</h3>
-						<h4 class="text-danger mt-3 mr-4 float-right">Hello,
+						<h3 class="text-primary mt-3 mr-4 float-left">Quản ly người
+							dùng</h3>
+						<h4 class="text-danger mt-3 mr-4 float-right">Xin chào,
 							${userLogined.username }</h4>
 					</div>
 
@@ -185,12 +187,12 @@
 									style="margin-right: 5px;" value="${productSearch.keyword }">
 
 								<button type="submit" id="btnSearch" name="btnSearch"
-									value="Search" class="btn btn-primary">Search</button>
+									value="Search" class="btn btn-primary">Tìm kiếm</button>
 							</div>
 							<div>
 								<a class="btn btn-outline-primary"
-									href="${base }/administrator/product" role="button"> Add
-									New </a>
+									href="${base }/administrator/product" role="button"> Thêm
+									mới </a>
 							</div>
 						</div>
 
@@ -199,7 +201,7 @@
 								<thead>
 									<tr>
 										<th>ID</th>
-										<th>Username</th>
+										<th>Tên người dùng</th>
 										<th>Email</th>
 										<th>SĐT</th>
 										<th>Địa chỉ</th>
@@ -208,31 +210,28 @@
 									</tr>
 								</thead>
 								<tbody id="table-body">
-									<c:forEach items="${userList.data }" var="user" varStatus="loop">
+									<c:forEach items="${userList.data }" var="user"
+										varStatus="loop">
 										<tr>
 											<td>${user.id }</td>
-											<td>
-											${user.username }
-											</td>
+											<td>${user.username }</td>
 											<td>${user.email }</td>
 											<td>${user.phone }</td>
 											<td>${user.shipping_address }</td>
-											<td>
-											<span id="_user_status_${user.id} }">
-												<c:choose>
-													<c:when test="${user.status }">
-														<input type="checkbox" checked="checked" readonly="readonly">
-													</c:when>
-													<c:otherwise>
-														<input type="checkbox" readonly="readonly">
-													</c:otherwise>
-												</c:choose>
-											</span>
-											</td>
+											<td><span id="_user_status_${user.id} }"> <c:choose>
+														<c:when test="${user.status }">
+															<input type="checkbox" checked="checked"
+																readonly="readonly">
+														</c:when>
+														<c:otherwise>
+															<input type="checkbox" readonly="readonly">
+														</c:otherwise>
+													</c:choose>
+											</span></td>
 											<td><a class="btn btn-sm btn-primary"
-												href="${base }/administrator/userControl/${user.id }">Edit</a>
+												href="${base }/administrator/userControl/${user.id }">Sửa</a>
 												<a class="btn btn-sm btn-danger"
-												href="${base }/administrator/userList/deleteUser/${user.id }">Delete</a></td>
+												href="${base }/administrator/userList/deleteUser/${user.id }">Xóa</a></td>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -270,7 +269,7 @@
 		});
 		});
 	</script>
-	
+
 	<script src="${base}/js/adminJS/app.js"></script>
 
 	<script

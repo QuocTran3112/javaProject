@@ -20,7 +20,7 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
 	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 	crossorigin="anonymous">
-	
+
 <!-- Web Icon -->
 <link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 
@@ -45,22 +45,17 @@
 		<div class="navi">
 			<div class="home">
 				<a href="${base }/home">
-					<h4>Home</h4>
+					<h4>Trang chủ</h4>
 				</a>
 			</div>
 			<div class="shop">
 				<a href="">
-					<h4>Shop</h4>
+					<h4>Cửa hàng</h4>
 				</a>
 			</div>
 			<div class="port">
 				<a href="">
 					<h4>Portfolio</h4>
-				</a>
-			</div>
-			<div class="page">
-				<a href="">
-					<h4>Page</h4>
 				</a>
 			</div>
 			<div class="blog">
@@ -70,7 +65,7 @@
 			</div>
 			<div class="elements">
 				<a href="">
-					<h4>Elements</h4>
+					<h4>Khác</h4>
 				</a>
 			</div>
 		</div>
@@ -79,17 +74,17 @@
 				<c:when test="${userLogined.username == null }">
 					<div class="register">
 						<div class="register1">
-							<a href="${base }/register"> Sign up </a>
+							<a href="${base }/register"> Đăng ký </a>
 						</div>
 						<div class="login">
-							<a href="${base }/login"> Log In </a>
+							<a href="${base }/login"> Đăng nhập </a>
 						</div>
 					</div>
 				</c:when>
 				<c:otherwise>
 					<div class="register">
 						<div class="register1">
-							<a href="${base }/logout">Log out</a>
+							<a href="${base }/logout">Đăng xuất</a>
 						</div>
 					</div>
 
@@ -113,12 +108,12 @@
 
 	<div class="direction">
 		<div class="title">
-			<p>Men's Lifestyle Clothing</p>
+			<p>Phong cách thời trang</p>
 		</div>
 
 		<div class="director">
-			<a href="">Home</a> > <a href="">Catalog</a> > <a href="">Men</a> > <a
-				href="">Clothing</a>
+			<a href="">Trang chủ</a> > <a href="">Danh mục</a> > <a href="">Thời
+				trang</a> > <a href="">Quần áo</a>
 		</div>
 	</div>
 	<main>
@@ -130,10 +125,10 @@
 					<div class="rate" data-rate-value=${tolStar }></div>
 
 				</div>
-				<p>${totalComment }rated</p>
+				<p>${totalComment }đánh giá</p>
 				<div class="cas">
 					<div class="color">
-						COLOR:
+						Màu:
 						<div class="colors">
 							<span id="W"></span> <span id="R"></span> <span id="Y"></span> <span
 								id="G"></span>
@@ -153,7 +148,7 @@
 						<button class="btn-add" data-type="add">+</button>
 					</div>
 					<button class="addtocart"
-						style="border: 0; background-color: #3853d8; color: white;">Add</button>
+						style="border: 0; background-color: #3853d8; color: white;">Thêm</button>
 				</div>
 			</div>
 			<div class="image">
@@ -167,13 +162,13 @@
 		<div class="comments">
 			<div class="choose">
 				<a href="${base }/productDetail/${product.id }" class="active">
-					REVIEW </a> <a href=""> SPECIFICATION </a> <a
-					href="${base }/productDetail/${product.id }/description">
-					DESCRIPTION </a>
+					Đánh giá </a> <a
+					href="${base }/productDetail/${product.id }/description"> Thông
+					tin </a>
 			</div>
 			<div class="allreview">
 				<h2>
-					All Reviews <span>(${totalComment })</span>
+					Tất cả đánh giá <span>(${totalComment })</span>
 				</h2>
 			</div>
 
@@ -208,7 +203,6 @@
 								</div>
 								<div style="font-size: 20px">
 									<div class="rate" data-rate-value=${cmt.starRate }></div>
-
 								</div>
 								<p>${cmt.content }</p>
 								<div id="">
@@ -218,7 +212,7 @@
 								<div class="submit" style="margin-bottom: 50px">
 									<button type="button" class="dltCommentBtn"
 										style="border: 0; color: white; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: rgb(20, 208, 250); width: 80px; height: 30px; border-radius: 5px; margin-top: 30px">
-										Delete</button>
+										Xóa</button>
 								</div>
 							</div>
 
@@ -250,8 +244,6 @@
 		</div>
 	</main>
 
-
-
 	<footer>
 		<div class="first-footer">
 			<div>
@@ -260,30 +252,43 @@
 			</div>
 			<div>
 				<a href=""> <img
-					src="${base}/img/customerIMG/social-media-logo.png" alt="">
+					src="${pageContext.servletContext.contextPath}/img/social-media-logo.png"
+					alt="">
 				</a>
 			</div>
 		</div>
 
 		<div class="second-footer">
 			<div class="other">
-				<a href="">Man</a> <a href="">Woman</a> <a href="">Lookbook</a> <a
-					href="">sale</a> <a href="">Blog</a>
+				<a href="">Nam</a> <a href="">Nữ</a> <a href="">Danh sách</a> <a
+					href="">Hạ giá</a> <a href="">Blog</a>
 			</div>
 			<div class="subscribe">
 				<h3>Subscribe to news</h3>
 				<input type="email" name="" id="" placeholder="Email adress">
-				<button type="submit">Submit</button>
+				<button type="submit">Nhập</button>
 			</div>
 		</div>
 
 		<div class="third-footer">
 			<div class="tit">Contact us</div>
-			<div class="address">San Fransisco, Caalifornia</div>
-			<div>400 Castro St, San Fransisco, CA</div>
-			<div class="phone">(+1)686-868-9999</div>
-			<img src="${base}/img/customerIMG/images/visa.png" alt="">
+			<div class="address">Hà Đông, Hà Nội</div>
+			<div>121 Cầy Giấy</div>
+			<div class="phone">(+84)686-868-9999</div>
+			<img
+				src="${pageContext.servletContext.contextPath}/img/customerIMG/visa.png"
+				alt="">
 		</div>
+
+		<div>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8091968812764!2d105.81231251485464!3d21.040319185992125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab11822392d9%3A0x35e9bf7fa41ae21f!2zQ3VuZyB0aOG7gyB0aGFvIFF14bqnbiBOZ-G7sWE!5e0!3m2!1svi!2s!4v1679581625752!5m2!1svi!2s"
+				width="600" height="450"
+				style="border: 0; width: 250px; height: 200px; margin-top: 30px; margin-left: 30px"
+				allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+
 	</footer>
 
 	<script type="text/javascript">

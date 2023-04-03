@@ -53,9 +53,8 @@
 					<div class="d-table-cell align-middle">
 
 						<div class="text-center mt-4">
-							<h1 class="h2">Get started</h1>
-							<p class="lead">Start creating the best possible user
-								experience for you customers.</p>
+							<h1 class="h2">Hãy bắt đầu</h1>
+							<p class="lead">Sáng tạo nội dung hài lòng khách hàng.</p>
 						</div>
 
 						<div class="card">
@@ -72,10 +71,10 @@
 										</div>
 
 										<div class="mb-3">
-											<label class="form-label">Username</label>
+											<label class="form-label">Tên người dùng</label>
 											<sf:input path="name" class="form-control form-control-lg"
 												type="text" name="name" id="idName"
-												placeholder="Enter your name" />
+												placeholder="Enter your name"/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Email</label>
@@ -84,25 +83,27 @@
 												placeholder="Enter your email" />
 										</div>
 										<div class="mb-3">
-											<label class="form-label">Password</label>
+											<label class="form-label">Mật khẩu</label>
 											<sf:input path="password"
 												class="form-control form-control-lg" type="password"
-												name="password" id="idPassword" placeholder="Enter password" readonly="readonly"/>
+												name="password" id="idPassword" placeholder="Enter password"
+												readonly="readonly" />
 										</div>
 										<div class="mb-3">
-											<label class="form-label">Confirm Password</label>
-											<sf:input path="password"
+											<label class="form-label">Xác nhận mật khẩu</label>
+											<sf:input path="cpassword"
 												class="form-control form-control-lg" type="password"
-												name="cPassword" placeholder="Confirm password" readonly="readonly"/>
+												name="cPassword" placeholder="Confirm password"
+												readonly="readonly" />
 										</div>
 										<div class="mb-3">
-											<label class="form-label">Phone</label>
+											<label class="form-label">SĐT</label>
 											<sf:input path="phone" class="form-control form-control-lg"
 												type="text" name="phone" id="idPhone"
 												placeholder="Enter your phone number" />
 										</div>
 										<div class="mb-3">
-											<label class="form-label">Address</label>
+											<label class="form-label">Địa chỉ</label>
 											<sf:input path="shipping_address"
 												class="form-control form-control-lg" type="text"
 												name="address" id="idAddress"
@@ -112,14 +113,14 @@
 											<div class="submit">
 												<button type="submit" form="form1" value="Submit"
 													style="border: 0; color: white; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: rgb(20, 208, 250); width: 300px; height: 30px; border-radius: 5px;">
-													Sign up now</button>
+													Đăng ký ngay</button>
 											</div>
 										</div>
 									</sf:form>
 								</div>
 							</div>
 							<p style="text-align: center;">
-								Already have an account? <a class="signIn" href="">Log in</a>
+								Already have an account? <a class="signIn" href="">Đăng nhập</a>
 							</p>
 						</div>
 

@@ -18,8 +18,7 @@
 	content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 <!-- Web Icon -->
-<link rel="shortcut icon"
-	href="${base}/img/WebIcon.png" />	
+<link rel="shortcut icon" href="${base}/img/WebIcon.png" />
 
 <!-- adminKit core -->
 <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
@@ -71,9 +70,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 
 <!-- include libraries(jQuery, bootstrap) -->
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-<script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<script type="text/javascript"
+	src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <title>Product</title>
 
@@ -106,7 +108,7 @@
 				</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">Pages</li>
+					<li class="sidebar-header">Trang Quản Lý</li>
 
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/dashBoard"> <i
@@ -131,7 +133,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh Mục Sản Phẩm</span>
 					</a></li>
-					
+
 					<li class="sidebar-item"><a class="sidebar-link"
 						href="${base }/administrator/userControl"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -144,7 +146,7 @@
 							class="align-middle" data-feather="user-plus"></i> <span
 							class="align-middle">Danh sách người dùng</span>
 					</a></li>
-					
+
 					<li class="sidebar-item active"><a class="sidebar-link"
 						href="${base }/administrator/saleOrderList"> <i
 							class="align-middle" data-feather="user-plus"></i> <span
@@ -161,26 +163,26 @@
 				<div class="container">
 
 					<div class="d-flex p-8 justify-content-between">
-						<h3 class="text-primary mt-3 mr-4 float-left">Product
-							Management</h3>
-						<h4 class="text-danger mt-3 mr-4 float-right">Hello,
+						<h3 class="text-primary mt-3 mr-4 float-left">Quản lý đơn
+							hàng</h3>
+						<h4 class="text-danger mt-3 mr-4 float-right">Xin chào,
 							${userLogined.username }</h4>
 					</div>
 
 					<form action="${base }/administrator/saleOrderList" method="get">
 						<!-- tìm kiếm sản phẩm trên danh sách -->
 						<div class="d-flex flex-row justify-content-end mt-4">
-							
+
 							<div class="d-flex flex-row">
 
 								<input id="page" name="page" class="form-control"
 									value="${saleOrderSearch.currentPage }" style="display: none;">
-								
+
 								<!-- tìm kiếm theo danh mục sản phẩm -->
-								<input type="text" id="id" name="id"
-									class="form-control" placeholder="Id" autocomplete="off"
-									style="margin-right: 5px;" value="${saleOrderSearch.id }">
-								
+								<input type="text" id="id" name="id" class="form-control"
+									placeholder="Id" autocomplete="off" style="margin-right: 5px;"
+									value="${saleOrderSearch.id }">
+
 								<!-- tìm kiếm theo tên khách hàng hoặc địa chỉ -->
 								<input type="text" id="keyword" name="keyword"
 									class="form-control" placeholder="keyword" autocomplete="off"
@@ -206,7 +208,8 @@
 									</tr>
 								</thead>
 								<tbody id="table-body">
-									<c:forEach items="${saleOrderList.data }" var="saleOrder" varStatus="loop">
+									<c:forEach items="${saleOrderList.data }" var="saleOrder"
+										varStatus="loop">
 										<tr>
 											<td>${saleOrder.id }</td>
 											<td>${saleOrder.code }</td>
@@ -214,22 +217,21 @@
 											<td>${saleOrder.customerEmail }</td>
 											<td>${saleOrder.customerAddress }</td>
 											<td>${saleOrder.total }</td>
-											<td>
-											<span id="_product_status_${saleOrder.id} }">
-												<c:choose>
-													<c:when test="${saleOrder.status }">
-														<input type="checkbox" checked="checked" readonly="readonly">
-													</c:when>
-													<c:otherwise>
-														<input type="checkbox" readonly="readonly">
-													</c:otherwise>
-												</c:choose>
-											</span>
-											</td>
+											<td><span id="_product_status_${saleOrder.id} }">
+													<c:choose>
+														<c:when test="${saleOrder.status }">
+															<input type="checkbox" checked="checked"
+																readonly="readonly">
+														</c:when>
+														<c:otherwise>
+															<input type="checkbox" readonly="readonly">
+														</c:otherwise>
+													</c:choose>
+											</span></td>
 											<td><a class="btn btn-sm btn-primary"
-												href="${base }/administrator/saleOrderControl/${saleOrder.id}">View Detail</a>
-												<a class="btn btn-sm btn-danger"
-												href="${base }/administrator/saleOrderList/deleteSO/${saleOrder.id}">Delete</a>
+												href="${base }/administrator/saleOrderControl/${saleOrder.id}">Chi
+													tiết</a> <a class="btn btn-sm btn-danger"
+												href="${base }/administrator/saleOrderList/deleteSO/${saleOrder.id}">Xóa</a>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -273,7 +275,7 @@
 		});
 
 	</script>
-	
+
 	<script src="${base}/js/adminJS/app.js"></script>
 
 	<script
